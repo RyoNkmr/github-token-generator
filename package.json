@@ -1,0 +1,28 @@
+{
+  "name": "github-token-generator",
+  "version": "0.0.1",
+  "description": "generate github token",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyoNkmr/github-token-generator.git"
+  },
+  "keywords": [
+    "github",
+    "github token"
+  ],
+  "author": "RyoNkmr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RyoNkmr/github-token-generator/issues"
+  },
+  "homepage": "https://github.com/RyoNkmr/github-token-generator#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
