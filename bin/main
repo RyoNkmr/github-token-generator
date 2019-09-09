@@ -2,7 +2,7 @@
 
 (async () => {
   try {
-    const token = require("../index.js")();
+    const token = await require("../index.js")();
     process.stdout.write(token);
   } catch (error) {
     console.error(error);
