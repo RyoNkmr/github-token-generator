@@ -4,6 +4,7 @@
   "description": "generate github token",
   "main": "index.js",
   "bin": "index.js",
+  "files": ["bin/*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
