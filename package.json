@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "generate github token",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": "bin/main",
   "files": [
     "bin/*"
   ],
