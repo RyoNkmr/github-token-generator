@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const jsonwebtoken = require("jsonwebtoken");
 const axios = require("axios");
 
@@ -14,12 +12,10 @@ const payload = {
 
 const jwt = jsonwebtoken.sign(payload, privateKey, { algorithm: "RS256" });
 
-(async () => {
+module.exports = async () => {
   try {
     const { data } = await axios.post(
-      `https://api.github.com/installations/${
-        process.env.GITHUB_APP_INSTALLATION_ID
-      }/access_tokens`,
+      `https://api.github.com/installations/${process.env.GITHUB_APP_INSTALLATION_ID}/access_tokens`,
       {},
       {
         headers: {
@@ -31,9 +27,8 @@ const jwt = jsonwebtoken.sign(payload, privateKey, { algorithm: "RS256" });
     if (!data.token) {
       throw Error(`Received response ${data}, but could not get token`);
     }
-    process.stdout.write(data.token);
+    return data.token;
   } catch ({ name, message }) {
-    console.error(`${name}: ${message}`);
-    process.exit(1);
+    throw Error(`${name}: ${message}`);
   }
-})();
+};

@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+(async () => {
+  try {
+    const token = require("../index.js")();
+    process.stdout.write(token);
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+})();
