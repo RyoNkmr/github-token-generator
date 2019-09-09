@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const jsonwebtoken = require("jsonwebtoken");
 const axios = require("axios");
 
